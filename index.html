@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <!-- title and favicon -->
-        <title>Web App</title>
+        <title>Plants Database</title>
         <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
         <!-- js -->
@@ -29,21 +29,20 @@
 
     <body>
         <header>
-            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <img class="logo" src="assets/plants.png" alt="logo" />
             <h1>Plant Search</h1>
         </header>
 
         <main>
             <section class="search">
-                <!-- <form id="search-form">
-                    <input name="name" placeholder="name" />
+                <h2>Search Plants by Type</h2>
+                <form id="search-form">
+                    <label for="type-select">Select a Plant Type: </label>
                     <select id="type-select" name="type">
                         <option value="">All Types</option>
                     </select>
-                    <button>🔍</button>
-                </form> -->
-
-                <p>Search to find Plants</p>
+                    <button type="submit" aria-label="submit-search">🔍</button>
+                </form>
             </section>
 
             <ul class="list" id="plant-list"></ul>

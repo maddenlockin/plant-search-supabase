@@ -1,19 +1,8 @@
-Load and display basic plant data:
-
--   `getPlants` fetch call in `fetch-utils.js`
--   Import, load event, findPlants, displayPlants in `app.js`
-
-Populate Types dropdown:
-
--   `getPlants` fetch call in `fetch-utils.js`
--   Import, load event, displayTypeOptions
-
-Search Plants:
-
--   Add query logic in `getPlants` in fetch call
--   Form event, findPlants in `app.js`
-
-<!-- Show Counts:
-
--   Add query logic in `getPlants`
--   findPlants, displayNotifications in `app.js` -->
+1. fetch - confirm with console log
+2. set response to state
+    - we need to update the VIEW so next we write...
+3. write render function
+    - to be called in the ...
+4. write display function (call render function)
+    - to be called after the state change to update view
+5. call display function after state update
