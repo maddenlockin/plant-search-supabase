@@ -4,13 +4,23 @@ const SUPABASE_KEY =
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-export async function getPlants(name) {
+export async function getAllPlants() {
     const response = await client.from('plants').select('*').order('Common_Name').limit(100);
-
     return response;
 }
 
 export async function getPlantTypes() {
     const response = await client.from('plant_types').select('*');
+    return response;
+}
+
+export async function getPlantsbyType(plantType) {
+    const response = await client
+        .from('plants')
+        .select('*')
+        .order('Common_Name')
+        .limit(100)
+        .eq('Plant_Type', plantType);
+
     return response;
 }
