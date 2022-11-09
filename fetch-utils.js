@@ -9,7 +9,7 @@ export async function getAllPlants() {
     return response;
 }
 
-export async function getPlantTypes() {
+export async function getTypes() {
     const response = await client.from('plant_types').select('*');
     return response;
 }

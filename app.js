@@ -1,5 +1,5 @@
 /* Imports */
-import { getAllPlants, getPlantsbyType, getPlantTypes } from './fetch-utils.js';
+import { getAllPlants, getPlantsbyType, getTypes } from './fetch-utils.js';
 import { renderPlant, renderPlantType } from './render-utils.js';
 /* Get DOM Elements */
 const plantList = document.getElementById('plant-list');
@@ -14,13 +14,14 @@ let types = [];
 window.addEventListener('load', async () => {
     // fetch plants and set them to state & display on page load
     const plantsRes = await getAllPlants();
-    console.log('plantsRes', plantsRes);
     plants = plantsRes.data;
+    console.log(plants);
     displayPlants();
+
     // fetch types and set them to state & display on page load
-    const typesRes = await getPlantTypes();
+    const typesRes = await getTypes();
     types = typesRes.data;
-    displayPlantTypes();
+    displayTypes();
 });
 
 searchForm.addEventListener('submit', (e) => {
@@ -44,7 +45,7 @@ function displayPlants() {
     }
 }
 
-function displayPlantTypes() {
+function displayTypes() {
     for (let type of types) {
         const option = renderPlantType(type);
         typeSelect.append(option);
